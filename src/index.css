@@ -9,14 +9,7 @@ body {
 }
 
 
-#page{
-  position: absolute;
-  left: 26%;
-  min-height: 100%;
-  border: solid 2px orange;
-  width: 73%;
 
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
