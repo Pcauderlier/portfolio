@@ -1,0 +1,58 @@
+nav {
+    margin: 0;
+    height: 100%;
+    min-width: 200px;
+    width: 25%;
+    border: 3px solid red;
+    position: fixed;
+}
+
+.headerDiv {
+    width: 90%;
+    text-align: center;
+    border: 2px black solid;
+    margin-top : 10% ;
+    margin-left: 5%;
+}
+#pc {
+    display: flex;
+}
+
+#titre {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    height: auto;
+    
+    font-size: 1em;
+    text-align: center;
+}
+#border_bot {
+    border-bottom: 2px black solid;
+}
+
+.profileImg {
+    margin: 5px;
+    width: 20%;
+    border-radius: 40px;
+}
+#menu ul {
+    margin: 0;
+    padding: 0;
+   
+}
+#menu li {
+    text-align: center;
+    margin-top : 5%;
+    margin-bottom: 5%;
+    padding: 0;
+    list-style: none;
+    border: 1px solid red;
+}
+
