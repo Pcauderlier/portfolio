@@ -1,19 +1,5 @@
-nav {
-    margin: 0;
-    height: 100%;
-    min-width: 200px;
-    width: 25%;
-    border: 3px solid red;
-    position: fixed;
-}
-#page{
-    position: absolute;
-    left: 26%;
-    min-height: 100%;
-    border: solid 2px orange;
-    width: 73%;
-  
-  }
+
+
 
 .headerDiv {
     width: 90%;
@@ -31,21 +17,32 @@ nav {
     padding: 0;
     margin: 0;
 }
-#menu li .link {
+.link {
+    display: block;
     text-decoration: none;
     color: black;
     padding: 5px;
-    min-height: 20px;
-    min-width: 60px;
+    width: 50%;
+    border-radius: 5px;
+    box-sizing: 10px;
     
 }
-#menu li .active {
+.smalllink {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    width: 90%;
+    border-radius: 5px;
+
+}
+ .active {
     
     border: 3px solid red;
     font-weight: bold;
 
 }
-#menu li .normal {
+ .normal {
     border: 2px solid black;
 }
 
@@ -73,11 +70,19 @@ h1 {
    
 }
 #menu li {
-    text-align: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
     margin-top : 5%;
     margin-bottom: 5%;
     padding: 0;
     list-style: none;
-    border: 1px solid red;
+
+}
+.sousMenu{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
