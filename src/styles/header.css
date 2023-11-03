@@ -32,8 +32,16 @@
     text-decoration: none;
     color: black;
     padding: 5px;
-    width: 90%;
-    border-radius: 5px;
+    width: 70%;
+    border-radius: 50px;
+
+}
+.verysmalllink {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    border-radius: 50px;
 
 }
  .active {
@@ -43,9 +51,15 @@
 
 }
  .normal {
-    border: 2px solid black;
+    border : 2px solid black
+    
 }
-
+.smallactive{
+    border : 2px solid black
+}
+.smallnormal {
+    border: 1px solid grey;
+}
 h1 {
     margin: 0;
     padding: 5px;

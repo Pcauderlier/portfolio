@@ -1,7 +1,17 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import Home from '../../img/domicile.png'
+import Projet from "../../img/projet.png";
+import Propos from  "../../img/carte-didentite.png";
+import Contact from "../../img/lettre.png";
+import Portfolio from "../../img/portefeuille.png";
+import Timer from "../../img/minuteur.png";
+import Website from "../../img/navigateur-web.png";
+import EPK from "../../img/LOGO_EPK_800.png";
+import Droite from "../../img/pointes-de-fleches-fines-a-droite.png"
 const Nav = styled.nav`
     margin: 0;
+    text-align : center;
     margin-left : 1%;
     height: 100%;
     min-width : 60px;
@@ -13,7 +23,13 @@ const Nav = styled.nav`
     
 `;
 const Button = styled.button`
-    margin-top: 15%
+    
+    margin-top: 15%;
+    border : 2px solid black;
+    border-radius: 25px;
+    width: 60%;
+    background-color: inherit;
+    
 `;
 const Img = styled.img`
     width : 90%;
@@ -40,6 +56,9 @@ const Li = styled.li`
     list-style: none;
 
 `;
+const ImgNav = styled.img`
+    width : 70%
+`;
 
 
 
@@ -47,30 +66,42 @@ const Li = styled.li`
 export default function SmallHeader({profileImg, updateIsOpen}){
     return (
         <Nav>
-            <Button onClick={()=> updateIsOpen(true)}>{'>>>'}</Button>
+            <Button onClick={()=> updateIsOpen(true)}><ImgNav src={Droite}/></Button>
             <Img src={profileImg}/>
             <Div>
             <Ul>
                 <Li>
-                    <NavLink to="/" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >Acceuil</NavLink>
+                    <NavLink to="/" className={({isActive}) =>  isActive ? "smalllink smallactive" : "smalllink smallnormal"} >
+                        <ImgNav src={Home} />
+                    </NavLink>
                 </Li>
                 <Li>
-                    <NavLink to="/portfolio" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >Portfolio</NavLink>
+                    <NavLink to="/portfolio" className={({isActive}) =>  isActive ? "smalllink smallactive" : "smalllink smallnormal"} >
+                        <ImgNav src={Portfolio} />
+                    </NavLink>
                 </Li>
                 <Li>
-                    <NavLink to="/about" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >A Propos</NavLink>
+                    <NavLink to="/about" className={({isActive}) =>  isActive ? "smalllink smallactive" : "smalllink smallnormal"} >
+                        <ImgNav src={Propos} />       
+                    </NavLink>
                 </Li>
                 <Li>
-                    <NavLink to="/projects" id="RouterNavLink" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >
+                    <NavLink to="/projects" id="RouterNavLink" className={({isActive}) =>  isActive ? "smalllink smallactive" : "smalllink smallnormal"} >
                         {({isActive}) => (
                         <div>
-                        <span>Projets en cours :</span>
+                        <span><ImgNav src={Projet} /></span>
                         {isActive && (
                             
                         <div className='sousMenu'>
-                            <NavLink to="/projects/fit-timer"  className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >Fit Timer</NavLink>
-                            <NavLink to="/projects/epk-data" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >Epk Data</NavLink>
-                            <NavLink to="/projects/site-vitrine" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >Ce site</NavLink>
+                            <NavLink to="/projects/fit-timer"  className={({isActive}) =>  isActive ? "verysmalllink smallactive" : "verysmalllink smallnormal"} >
+                                <ImgNav src={Timer} />
+                            </NavLink>
+                            <NavLink to="/projects/epk-data" className={({isActive}) =>  isActive ? "verysmalllink smallactive" : "verysmalllink smallnormal"} >
+                                <ImgNav src={EPK}/>
+                            </NavLink>
+                            <NavLink to="/projects/site-vitrine" className={({isActive}) =>  isActive ? "verysmalllink smallactive" : "verysmalllink smallnormal"} >
+                                <ImgNav src={Website} />
+                            </NavLink>
                         </div>
                         )}
                         </div>
@@ -81,7 +112,9 @@ export default function SmallHeader({profileImg, updateIsOpen}){
                         </NavLink>
                     </Li>
                     <Li>
-                        <NavLink to="/contact" className={({isActive}) =>  isActive ? "smalllink active" : "smalllink normal"} >Contact</NavLink>
+                        <NavLink to="/contact" className={({isActive}) =>  isActive ? "smalllink smallactive" : "smalllink smallnormal"} >
+                            <ImgNav src={Contact} />
+                        </NavLink>
                     </Li>
                 </Ul>
             </Div>
