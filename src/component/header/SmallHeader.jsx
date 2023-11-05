@@ -29,6 +29,9 @@ const Button = styled.button`
     border-radius: 25px;
     width: 60%;
     background-color: inherit;
+    &:hover {
+        box-shadow: 3px 3px 10px black;
+    }
     
 `;
 const Img = styled.img`

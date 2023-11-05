@@ -51,6 +51,9 @@ const Button = styled.button`
     width: 15%;
     margin-right : 10%;
     background-color: inherit;
+    &:hover {
+        box-shadow: 3px 3px 10px black;
+    }
 
     `;
 const ButtonDiv = styled.div`
