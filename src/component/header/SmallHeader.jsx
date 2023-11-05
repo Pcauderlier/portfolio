@@ -19,7 +19,7 @@ const Nav = styled.nav`
     border-radius : 20px;
     position: fixed;
     z-index : 1;
-    background-color : red
+    background: linear-gradient(135deg,rgb(51,190,255),rgb(226,51,255))
     
 `;
 const Button = styled.button`
@@ -47,8 +47,8 @@ const Ul = styled.ul`
 `;
 const Li = styled.li`
     margin : 0;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 15%;
+    margin-bottom: 15%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -93,15 +93,24 @@ export default function SmallHeader({profileImg, updateIsOpen}){
                         {isActive && (
                             
                         <div className='sousMenu'>
+                        <Li>
                             <NavLink to="/projects/fit-timer"  className={({isActive}) =>  isActive ? "verysmalllink smallactive" : "verysmalllink smallnormal"} >
                                 <ImgNav src={Timer} />
                             </NavLink>
+
+                        </Li>
+                        <Li>
                             <NavLink to="/projects/epk-data" className={({isActive}) =>  isActive ? "verysmalllink smallactive" : "verysmalllink smallnormal"} >
                                 <ImgNav src={EPK}/>
                             </NavLink>
+
+                        </Li>
+                        <Li>
+
                             <NavLink to="/projects/site-vitrine" className={({isActive}) =>  isActive ? "verysmalllink smallactive" : "verysmalllink smallnormal"} >
                                 <ImgNav src={Website} />
                             </NavLink>
+                        </Li>
                         </div>
                         )}
                         </div>

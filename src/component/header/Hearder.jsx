@@ -17,6 +17,7 @@ const RigthDiv = styled.div`
     min-height: 100%;
     border: solid 2px orange;
     width: ${props => (95-props.divRight)}%;
+    background-color : grey;
     z-index : 2;
     
 `;
@@ -30,11 +31,11 @@ let [divRight,updateDivRight] = useState(25)
 
 useEffect(()=> {
     if (isOpen){ 
-        if(windowWidth >= 880){
+        if(windowWidth >= 1088){
             updateDivRight(25)
         }
-        else{ // min-width de munu ouvert = 220px
-            const calc = (22000/windowWidth).toFixed(2) // Car min-width du menu ouvert = 220px calculer en % la taille de divRight
+        else{ // min-width de munu ouvert = 272px
+            const calc = (27200/windowWidth).toFixed(2) // Car min-width du menu ouvert = 220px calculer en % la taille de divRight
             updateDivRight(calc)
         }
     }
